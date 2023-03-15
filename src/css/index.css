@@ -1,0 +1,197 @@
+/* global variables */
+:root {
+  --primary_100: #0f0d13;
+  --primary_200: #2a2141;
+  --gray_100: #a5a2b0;
+  --gray_200: #e1e1e6;
+
+  --outline: var(--gray_100) double 0.4rem;
+  --transition: 100ms;
+  --radius: 0.5rem;
+}
+
+/* soft reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* general styles */
+html,
+button,
+input {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--primary_100);
+  color: var(--gray_100);
+}
+
+button {
+  cursor: pointer;
+}
+
+/* player styles */
+.wrapper {
+  min-height: 100dvh;
+  display: grid;
+  place-content: center;
+}
+
+.container {
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary_200);
+  padding: 3rem 2rem;
+  border-radius: var(--radius);
+}
+
+.choose-music-input {
+  display: none;
+}
+
+.choose-music-button {
+  background-color: var(--gray_200);
+  color: var(--primary_200);
+  border-radius: var(--radius);
+  padding: 1rem 0.5rem;
+  transition: var(--transition);
+  text-align: center;
+  cursor: pointer;
+  border: none;
+}
+
+.choose-music-button:focus-visible {
+  outline: var(--outline);
+}
+
+.choose-music-button:hover {
+  outline: none;
+  filter: none;
+  background-color: var(--gray_100);
+}
+
+.thumbnail {
+  display: block;
+  max-width: 100%;
+  aspect-ratio: 1/1;
+  margin-top: 2rem;
+  border-radius: var(--radius);
+}
+
+.header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--gray_200);
+  margin-top: 1.8rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.subheader {
+  font-size: 1.2rem;
+  font-weight: normal;
+  margin-top: 0.2rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.8rem;
+}
+
+.action-button {
+  background-color: transparent;
+  border: none;
+  transition: var(--transition);
+}
+
+.action-button:focus-visible {
+  outline: var(--outline);
+}
+
+.action-button:hover {
+  outline: none;
+  filter: none;
+}
+
+.action-button path {
+  fill: var(--gray_200);
+  transition: var(--transition);
+}
+
+.action-button:hover path {
+  fill: var(--gray_100);
+}
+
+.progress-bar {
+  margin-top: 1.8rem;
+  appearance: none;
+  overflow: hidden;
+  background-color: transparent;
+  border-radius: 0.2rem;
+  height: 0.4rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.progress-bar:focus-visible {
+  outline: var(--outline);
+}
+
+.progress-bar:hover {
+  outline: none;
+}
+
+/* webkit progress bar */
+.progress-bar::-webkit-slider-runnable-track {
+  background: var(--gray_100);
+}
+
+.progress-bar::-webkit-slider-thumb {
+  --thumb_size: 0.4rem;
+  --shadow_offset: calc(var(--thumb_size) / 2);
+
+  appearance: none;
+  width: var(--thumb_size);
+  height: var(--thumb_size);
+  border-radius: 50%;
+  background: var(--gray_200);
+  box-shadow: calc(-99rem - var(--shadow_offset)) 0 0 99rem var(--gray_200);
+}
+
+/* moz progress bar */
+.progress-bar::-moz-range-track {
+  height: 0.4rem;
+  background: var(--gray_100);
+}
+
+.progress-bar::-moz-range-thumb {
+  --thumb_size: 0.4rem;
+  --shadow_offset: calc(var(--thumb_size) / 2);
+
+  appearance: none;
+  width: var(--thumb_size);
+  height: var(--thumb_size);
+  border-radius: 50%;
+  background: var(--gray_200);
+  box-shadow: calc(-99rem - var(--shadow_offset)) 0 0 99rem var(--gray_200);
+  border: none;
+}
+
+.duration {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.6rem;
+}
