@@ -17,7 +17,7 @@
 <br>
 
 <p align="center">
-  <img src="/01/github/preview.jpg" width="100%">
+  <img src="./github/preview.jpg" width="100%">
 </p>
 
 ## 🚀 Tecnologias
@@ -30,7 +30,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 🔖 Layout
 
-Você pode visualizar o layout do projeto através [DESSE LINK](https://player-rafagnx.vercel.app/).
+Você pode visualizar o layout do projeto através [DESSE LINK](https://music.rafagnx.vercel.app/).
 
 ## :memo: Licença
 
